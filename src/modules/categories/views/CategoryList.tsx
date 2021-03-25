@@ -9,7 +9,9 @@ import { Category } from '../models/Category';
 
 
 
-export const CategoryList: React.FC<ICategoryListView> = ({ categories, onSelectCategories }) => {
+export const CategoryList: React.FC<ICategoryListView> = ({
+  categories, onSelectCategories, style,
+}) => {
   // Store selection filter mode
   const [mode, setMode] = useState<'single' | 'multiple'>('single');
 
@@ -44,6 +46,7 @@ export const CategoryList: React.FC<ICategoryListView> = ({ categories, onSelect
       contentInset={{ left: LayoutVars.HorizontalPadding, right: LayoutVars.HorizontalPadding }}
       horizontal
       showsHorizontalScrollIndicator={false}
+      style={[style]}
     >
       {categoryModels.map((cat, index) => (
         <CategoryView

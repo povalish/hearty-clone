@@ -6,9 +6,12 @@ import { Logo } from 'ui-kit/Logo';
 import { FilterButton } from 'ui-kit/Buttons/FilterButton';
 
 import { globalStyles } from 'modules/globals/Styles';
+
 import { CategoryList } from 'modules/categories/views/CategoryList';
 import { CampaignCategory } from 'modules/categories/models/CampaignCategory';
 import { campaignTypes } from 'modules/campaigns/mocks/campaignTypes';
+import { StoryList } from 'modules/stories/views/StoryList';
+import { availableStories } from 'modules/stories/mocks/availableStories';
 
 
 
@@ -41,6 +44,11 @@ export const HomeScreen: React.FC = () => {
       <CategoryList
         categories={campaignCategories}
         onSelectCategories={() => undefined}
+        style={{ paddingBottom: 10 }}
+      />
+
+      <StoryList
+        stories={availableStories}
       />
     </SafeAreaView>
   );
