@@ -1,3 +1,3 @@
 export const LayoutVars = {
-  HorizontalPadding: 20,
+  HorizontalPadding: 15,
 };

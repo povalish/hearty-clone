@@ -6,6 +6,20 @@ export const globalStyles = StyleSheet.create({
   container: {
     paddingHorizontal: LayoutVars.HorizontalPadding,
   },
+
+  flexRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+});
+
+export const linkStyles = StyleSheet.create({
+  link: {
+    fontSize: 12,
+    fontWeight: '700',
+    color: Colors.Primary,
+  },
 });
 
 export const cardStyles = StyleSheet.create({

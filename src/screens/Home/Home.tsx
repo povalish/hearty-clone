@@ -12,6 +12,7 @@ import { CampaignCategory } from 'modules/categories/models/CampaignCategory';
 import { campaignTypes } from 'modules/campaigns/mocks/campaignTypes';
 import { StoryList } from 'modules/stories/views/StoryList';
 import { availableStories } from 'modules/stories/mocks/availableStories';
+import { Card } from 'ui-kit/Card';
 
 
 
@@ -50,6 +51,10 @@ export const HomeScreen: React.FC = () => {
       <StoryList
         stories={availableStories}
       />
+
+      <View style={[globalStyles.container]}>
+        <Card />
+      </View>
     </SafeAreaView>
   );
 };

@@ -3,6 +3,7 @@ export const ColorsVars = {
   Green: '#9EFFC5',
   Black: '#000000',
   Grey: '#828282',
+  White: '#FFFFFF',
 };
 
 export const Colors = {
@@ -10,4 +11,5 @@ export const Colors = {
   Secondary: ColorsVars.Green,
   Main: ColorsVars.Black,
   Grey: ColorsVars.Grey,
+  White: ColorsVars.White,
 };
