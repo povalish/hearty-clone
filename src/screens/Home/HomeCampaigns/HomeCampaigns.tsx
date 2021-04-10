@@ -17,7 +17,7 @@ import { ScrollableArea } from './views/ScrollableArea';
 
 
 
-export const HomeScreen: React.FC = () => {
+export const HomeCampaignsScreen: React.FC = () => {
   // Store available campaign categories
   const [campaignCategories, setCampaignCategories] = useState<CampaignCategory[]>([]);
 

@@ -23,6 +23,7 @@ module.exports = function (api) {
             'ui-kit': './src/ui-kit',
             'assets': './assets',
             'utils': './src/utils',
+            'navigation': './src/navigation',
             'modules': './src/modules',
           },
         },
