@@ -5,6 +5,8 @@ import {
   View,
   Image,
   ImageSourcePropType,
+  StyleProp,
+  ViewStyle,
 } from 'react-native';
 
 import { cardStyles, globalStyles, linkStyles } from 'modules/globals/Styles';
@@ -21,26 +23,28 @@ import { PrimaryButton } from 'ui-kit/Buttons/PrimaryButton';
 
 
 interface ICardView {
-  image: ImageSourcePropType;
+  image?: ImageSourcePropType;
 
-  progressCollected: number;
-  progressRequired: number;
+  progressCollected?: number;
+  progressRequired?: number;
 
-  link: string;
-  linkLable: string;
+  link?: string;
+  linkLable?: string;
 
   onShare?: () => void;
 
-  title: string;
+  title?: string;
 
-  reposts: number;
-  donations: number;
+  reposts?: number;
+  donations?: number;
 
   buttonLabel?: string;
   buttonAction?: () => void;
+
+  style?: StyleProp<ViewStyle>;
 }
 
-export const Card: React.FC = () => (
+export const Card: React.FC<ICardView> = ({ style }) => (
   <TouchableOpacity style={[cardStyles.shadow]} activeOpacity={0.8}>
     <View style={[cardStyles.wrapper, localStyles.wrapper]}>
       <Image source={SampleImage} style={{ width: '100%' }} />

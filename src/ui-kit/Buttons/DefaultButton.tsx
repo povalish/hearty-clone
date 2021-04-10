@@ -1,25 +1,25 @@
 import React from 'react';
 import {
-  StyleProp, TouchableOpacity, ViewStyle, Text,
+  Text, StyleProp, TouchableOpacity, ViewStyle,
 } from 'react-native';
 
+import { localStyles } from './styles';
 import { IButton } from 'types/Button';
 import { Colors } from 'modules/globals/Colors';
-import { localStyles } from './styles';
 
 
 interface IPrimaryButton extends IButton {
   style?: StyleProp<ViewStyle>
 }
 
-export const PrimaryButton: React.FC<IPrimaryButton> = ({ onPress, style, children }) => (
+export const DefaultButton: React.FC<IPrimaryButton> = ({ onPress, style, children }) => (
   <TouchableOpacity
     activeOpacity={0.6}
     onPress={onPress}
-    style={[style, localStyles.buttonPrimary]}
+    style={[style, localStyles.buttonBase]}
   >
     <Text
-      style={localStyles.textWhite}
+      style={localStyles.textPrimary}
     >
       {children}
     </Text>

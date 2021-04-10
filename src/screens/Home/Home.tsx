@@ -4,6 +4,7 @@ import { SafeAreaView, Text, View } from 'react-native';
 import { styles } from './styles';
 import { Logo } from 'ui-kit/Logo';
 import { FilterButton } from 'ui-kit/Buttons/FilterButton';
+import { Card } from 'ui-kit/Card';
 
 import { globalStyles } from 'modules/globals/Styles';
 
@@ -12,7 +13,7 @@ import { CampaignCategory } from 'modules/categories/models/CampaignCategory';
 import { campaignTypes } from 'modules/campaigns/mocks/campaignTypes';
 import { StoryList } from 'modules/stories/views/StoryList';
 import { availableStories } from 'modules/stories/mocks/availableStories';
-import { Card } from 'ui-kit/Card';
+import { ScrollableArea } from './views/ScrollableArea';
 
 
 
@@ -36,25 +37,26 @@ export const HomeScreen: React.FC = () => {
   }, []);
 
   return (
-    <SafeAreaView>
-      <View style={[globalStyles.container, styles.header]}>
-        <Logo type='campaign' />
-        <FilterButton />
-      </View>
+    <View style={styles.container}>
+      <SafeAreaView>
+        <View style={[globalStyles.container, styles.header]}>
+          <Logo type='campaign' />
+          <FilterButton />
+        </View>
+      </SafeAreaView>
 
       <CategoryList
         categories={campaignCategories}
         onSelectCategories={() => undefined}
-        style={{ paddingBottom: 10 }}
+        style={styles.categories}
       />
 
-      <StoryList
-        stories={availableStories}
-      />
-
-      <View style={[globalStyles.container]}>
-        <Card />
+      <View style={styles.scrollArea}>
+        <ScrollableArea
+          stories={availableStories}
+          campaigns={{ status: 'loaded', payload: [1, 2, 3, 4, 5, 6, 7] }}
+        />
       </View>
-    </SafeAreaView>
+    </View>
   );
 };
