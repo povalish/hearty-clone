@@ -1,4 +1,1 @@
-# Boilerplate for React Native
-
-W/ TypeScript
-w/ ESLint
+# Heart App Clonse
